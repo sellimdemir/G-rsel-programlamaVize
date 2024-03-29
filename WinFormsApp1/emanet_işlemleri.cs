@@ -41,5 +41,18 @@ namespace WinFormsApp1
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //AlanKisiIsim , AlanKisiSoyisim, AlanKisiTC , AlanKisiTelefon
+                                      //A ,KitapAdi,KitapYazari,TeslimSuresi
+            Emanet emanet = new Emanet();
+            emanet.AlanKisiIsim = textBox1.Text;
+            emanet.TeslimSuresi = Convert.ToInt32(textBox4.Text);
+            emanet.AlanKisiTC= Convert.ToInt32(textBox5.Text);
+
+            Emanet.Emanetlist.Add(emanet);
+
+        }
     }
 }

@@ -109,5 +109,35 @@ namespace WinFormsApp1
 
             }
         }
+
+        private void emanetKaydetbtn_Click(object sender, EventArgs e)
+        {
+            string yazilacak = JsonSerializer.Serialize<List<Emanet>>(Emanet.Emanetlist);
+
+            SaveFileDialog dialog = new SaveFileDialog();
+            dialog.Filter = "JSon Dosyasi|*.json";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+
+                string dosyaYolu = dialog.FileName;
+                File.WriteAllText(dosyaYolu, yazilacak, Encoding.UTF8);
+
+            }
+        }
+
+        private void emanetYuklebtn_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "JSon Dosyasi|*.json";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                string data = File.ReadAllText(dialog.FileName);
+                Emanet.Emanetlist = JsonSerializer.Deserialize<List<Emanet>>(data);
+                foreach (var emanet in Emanet.Emanetlist)
+                {
+                    emanet.tabloEkle(Kitaplardt);
+                }
+            }
+        }
     }
 }

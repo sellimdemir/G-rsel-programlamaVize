@@ -35,6 +35,8 @@
             yuklebtn = new Button();
             kitapkaydetbtn = new Button();
             kitapyuklebtn = new Button();
+            emanetKaydetbtn = new Button();
+            emanetYuklebtn = new Button();
             SuspendLayout();
             // 
             // button1
@@ -107,14 +109,36 @@
             kitapyuklebtn.UseVisualStyleBackColor = true;
             kitapyuklebtn.Click += kitapyuklebtn_Click;
             // 
+            // emanetKaydetbtn
+            // 
+            emanetKaydetbtn.Location = new Point(502, 321);
+            emanetKaydetbtn.Name = "emanetKaydetbtn";
+            emanetKaydetbtn.Size = new Size(75, 45);
+            emanetKaydetbtn.TabIndex = 6;
+            emanetKaydetbtn.Text = "kaydet";
+            emanetKaydetbtn.UseVisualStyleBackColor = true;
+            emanetKaydetbtn.Click += emanetKaydetbtn_Click;
+            // 
+            // emanetYuklebtn
+            // 
+            emanetYuklebtn.Location = new Point(583, 321);
+            emanetYuklebtn.Name = "emanetYuklebtn";
+            emanetYuklebtn.Size = new Size(75, 45);
+            emanetYuklebtn.TabIndex = 6;
+            emanetYuklebtn.Text = "Yukle";
+            emanetYuklebtn.UseVisualStyleBackColor = true;
+            emanetYuklebtn.Click += emanetYuklebtn_Click;
+            // 
             // ana_ekran
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Highlight;
             ClientSize = new Size(800, 450);
+            Controls.Add(emanetYuklebtn);
             Controls.Add(kitapyuklebtn);
             Controls.Add(yuklebtn);
+            Controls.Add(emanetKaydetbtn);
             Controls.Add(kitapkaydetbtn);
             Controls.Add(kaydetbtn);
             Controls.Add(button3);
@@ -134,5 +158,7 @@
         private Button yuklebtn;
         private Button kitapkaydetbtn;
         private Button kitapyuklebtn;
+        private Button emanetKaydetbtn;
+        private Button emanetYuklebtn;
     }
 }

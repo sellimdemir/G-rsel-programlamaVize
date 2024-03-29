@@ -9,6 +9,7 @@ namespace WinFormsApp1
 {
     public class Emanet
     {
+        public static List<Emanet> Emanetlist;
         public string AlanKisiIsim {  get; set; }
         public string AlanKisiSoyisim {  get; set; }
         public int AlanKisiTC {  get; set; }

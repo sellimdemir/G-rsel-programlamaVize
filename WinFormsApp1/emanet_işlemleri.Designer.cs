@@ -171,6 +171,7 @@
             button3.TabIndex = 14;
             button3.Text = "ödünç al";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // emanet_işlemleri
             // 
