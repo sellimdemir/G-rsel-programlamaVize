@@ -31,6 +31,8 @@
             button1 = new Button();
             button4 = new Button();
             button3 = new Button();
+            kaydetbtn = new Button();
+            yuklebtn = new Button();
             SuspendLayout();
             // 
             // button1
@@ -63,12 +65,34 @@
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
+            // kaydetbtn
+            // 
+            kaydetbtn.Location = new Point(502, 43);
+            kaydetbtn.Name = "kaydetbtn";
+            kaydetbtn.Size = new Size(75, 45);
+            kaydetbtn.TabIndex = 6;
+            kaydetbtn.Text = "kaydet";
+            kaydetbtn.UseVisualStyleBackColor = true;
+            kaydetbtn.Click += kaydetbtn_Click;
+            // 
+            // yuklebtn
+            // 
+            yuklebtn.Location = new Point(583, 43);
+            yuklebtn.Name = "yuklebtn";
+            yuklebtn.Size = new Size(75, 45);
+            yuklebtn.TabIndex = 6;
+            yuklebtn.Text = "Yukle";
+            yuklebtn.UseVisualStyleBackColor = true;
+            yuklebtn.Click += yuklebtn_Click;
+            // 
             // ana_ekran
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Highlight;
             ClientSize = new Size(800, 450);
+            Controls.Add(yuklebtn);
+            Controls.Add(kaydetbtn);
             Controls.Add(button3);
             Controls.Add(button4);
             Controls.Add(button1);
@@ -82,5 +106,7 @@
         private Button button1;
         private Button button4;
         private Button button3;
+        private Button kaydetbtn;
+        private Button yuklebtn;
     }
 }

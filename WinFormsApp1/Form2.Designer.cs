@@ -149,6 +149,7 @@
             butonEkleUye.TabIndex = 12;
             butonEkleUye.Text = "ekle";
             butonEkleUye.UseVisualStyleBackColor = true;
+            butonEkleUye.Click += butonEkleUye_Click;
             // 
             // butonGuncelleUye
             // 

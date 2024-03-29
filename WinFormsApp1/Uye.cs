@@ -9,6 +9,7 @@ namespace WinFormsApp1
 {
     public class Uye
     {
+        public static List<Uye> UyeList=new List<Uye>();
         public string? Adi { get; set; }
         public string? Soyadi { get; set; }
         public string? Cinsiyet { get; set; }

@@ -21,5 +21,18 @@ namespace WinFormsApp1
         {
 
         }
+
+        private void butonEkleUye_Click(object sender, EventArgs e)
+        {
+            Uye uye=new Uye();
+            uye.Adi = textBox1.Text;
+            uye.Soyadi = textBox2.Text;
+            uye.dogumTarihi = Convert.ToInt32(textBox3.Text);
+            uye.Telefon=Convert.ToInt32(textBox4.Text);
+            uye.TC=Convert.ToInt32(textBox5.Text);
+
+            Uye.UyeList.Add(uye);
+
+        }
     }
 }
