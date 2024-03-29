@@ -9,7 +9,7 @@ namespace WinFormsApp1
 {
     public class Kitap
     {
-
+        public static List<Kitap> KitapList;
         public string Kitapismi { get; set; }
         public string Yazari {  get; set; }
         public int sayfaSayisi {  get; set; }

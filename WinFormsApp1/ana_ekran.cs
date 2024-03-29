@@ -14,6 +14,7 @@ namespace WinFormsApp1
     public partial class ana_ekran : Form
     {
         DataTable Uyelerdt;
+        DataTable Kitaplardt;
         public ana_ekran()
         {
             InitializeComponent();
@@ -24,6 +25,12 @@ namespace WinFormsApp1
             Uyelerdt.Columns.Add("DogumTarihi");
             Uyelerdt.Columns.Add("Telefon");
             Uyelerdt.Columns.Add("TC");
+
+            Kitaplardt = new DataTable();
+            Kitaplardt.Columns.Add("Kitap ismi");
+            Kitaplardt.Columns.Add("Kitap Yazari");
+            Kitaplardt.Columns.Add("Sayfa Sayisi");
+            Kitaplardt.Columns.Add("SeriNo");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -70,6 +77,36 @@ namespace WinFormsApp1
                 {
                     uye.tabloEkle(Uyelerdt);
                 }
+            }
+        }
+
+        private void kitapyuklebtn_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "JSon Dosyasi|*.json";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                string data = File.ReadAllText(dialog.FileName);
+                Kitap.KitapList = JsonSerializer.Deserialize<List<Kitap>>(data);
+                foreach (Uye uye in Uye.UyeList)
+                {
+                    uye.tabloEkle(Kitaplardt);
+                }
+            }
+        }
+
+        private void kitapkaydetbtn_Click(object sender, EventArgs e)
+        {
+            string yazilacak = JsonSerializer.Serialize<List<Kitap>>(Kitap.KitapList);
+
+            SaveFileDialog dialog = new SaveFileDialog();
+            dialog.Filter = "JSon Dosyasi|*.json";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+
+                string dosyaYolu = dialog.FileName;
+                File.WriteAllText(dosyaYolu, yazilacak, Encoding.UTF8);
+
             }
         }
     }

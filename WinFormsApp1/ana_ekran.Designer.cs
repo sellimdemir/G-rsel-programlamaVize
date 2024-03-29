@@ -33,6 +33,8 @@
             button3 = new Button();
             kaydetbtn = new Button();
             yuklebtn = new Button();
+            kitapkaydetbtn = new Button();
+            kitapyuklebtn = new Button();
             SuspendLayout();
             // 
             // button1
@@ -85,13 +87,35 @@
             yuklebtn.UseVisualStyleBackColor = true;
             yuklebtn.Click += yuklebtn_Click;
             // 
+            // kitapkaydetbtn
+            // 
+            kitapkaydetbtn.Location = new Point(502, 170);
+            kitapkaydetbtn.Name = "kitapkaydetbtn";
+            kitapkaydetbtn.Size = new Size(75, 45);
+            kitapkaydetbtn.TabIndex = 6;
+            kitapkaydetbtn.Text = "kaydet";
+            kitapkaydetbtn.UseVisualStyleBackColor = true;
+            kitapkaydetbtn.Click += kitapkaydetbtn_Click;
+            // 
+            // kitapyuklebtn
+            // 
+            kitapyuklebtn.Location = new Point(583, 170);
+            kitapyuklebtn.Name = "kitapyuklebtn";
+            kitapyuklebtn.Size = new Size(75, 45);
+            kitapyuklebtn.TabIndex = 6;
+            kitapyuklebtn.Text = "Yukle";
+            kitapyuklebtn.UseVisualStyleBackColor = true;
+            kitapyuklebtn.Click += kitapyuklebtn_Click;
+            // 
             // ana_ekran
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Highlight;
             ClientSize = new Size(800, 450);
+            Controls.Add(kitapyuklebtn);
             Controls.Add(yuklebtn);
+            Controls.Add(kitapkaydetbtn);
             Controls.Add(kaydetbtn);
             Controls.Add(button3);
             Controls.Add(button4);
@@ -108,5 +132,7 @@
         private Button button3;
         private Button kaydetbtn;
         private Button yuklebtn;
+        private Button kitapkaydetbtn;
+        private Button kitapyuklebtn;
     }
 }

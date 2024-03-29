@@ -170,6 +170,7 @@
             button2.TabIndex = 14;
             button2.Text = "ekle";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
